@@ -14,20 +14,33 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="style.css"
+      href="/css/style.css"
     />
+    <link rel="stylesheet" href="/css/animate.css" />
   </head>
   <body>
-    <div class="header">
+    <div id="top" class="header">
       <div class="nav-container">
-        <div class="nav-btn btn1">
-          <a class="nav-link" href="#">About</a>
+        <div id="btn1" class="nav-btn btn1-anim">
+          <a
+            id="navlink1"
+            class="nav-link"
+            href="#about"
+            >About</a
+          >
         </div>
-        <div class="nav-btn btn2">
-          <a class="nav-link" href="#">Portfolio</a>
+        <div id="btn2" class="nav-btn btn2-anim">
+          <a
+            id="navlink2"
+            class="nav-link"
+            href="#portfolio"
+            >Portfolio</a
+          >
         </div>
-        <div class="nav-btn btn3">
-          <a class="nav-link" href="#">Contact</a>
+        <div id="btn3" class="nav-btn btn3-anim">
+          <a id="navlink3" class="nav-link" href="#"
+            >Contact</a
+          >
         </div>
       </div>
     </div>
@@ -45,13 +58,117 @@
       </div>
       <div class="profile-img">
         <img
-          src="profile.png"
+          src="../images/profile.png"
           alt="Profile picture of Cameron"
         />
       </div>
-    </div>
-    <div class="second-body"></div>
+      <div id="about" class="second-body">
+        <div class="stock-img">
+          <img
+            src="../images/stock.jpg"
+            alt="stock photo"
+          />
+        </div>
 
-    <script type="text/javascript" src="script.js" />
+        <div class="second-text">
+          <h1 class="big">About Me</h1>
+        </div>
+        <div class="about-options">
+          <ul>
+            <li>
+              <button
+                id="life"
+                onclick="lifeText()"
+                class="about-options-button"
+              >
+                Life
+              </button>
+            </li>
+            <li>
+              <button
+                id="education"
+                onclick="educationText()"
+                class="about-options-button"
+              >
+                Education
+              </button>
+            </li>
+            <li>
+              <button
+                id="experience"
+                onclick="experienceText()"
+                class="about-options-button"
+              >
+                Experience
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div
+          id="p-div"
+          class="about-paragraph animate__animated"
+        >
+          <p id="about-paragraph">
+            I am currently 29 years old. I am from
+            Oklahoma and I have a 2 year old son who is
+            my world! When I am not working, I am
+            typically playing with him.
+          </p>
+        </div>
+      </div>
+      <div class="third-body">
+        <div class="portfolio-header-container">
+          <h1 id="portfolio" class="big">Portfolio</h1>
+        </div>
+        <div class="card-container">
+          <div id="card1" class="card">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://cameroncrockett.github.io/capture-project/"
+              ><img
+                id="capture-image"
+                src="./images/captureproject.png"
+                alt="Capture Project"
+              />
+            </a>
+          </div>
+          <div id="card2" class="card">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://cameroncrockett.github.io/music-player/"
+              ><img
+                id="music-image"
+                src="./images/musicplayer.png"
+                alt="Music Player Project"
+              />
+            </a>
+          </div>
+          <!--           <div id="card3" class="card">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://cameroncrockett.github.io/ignite-project/"
+              ><img
+                id="ignite-image"
+                src="./images/captureproject.png"
+                alt="Ignite Project"
+              />
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="topBtn">
+      <button onclick="window.location.href='#top'">
+        Top ^
+      </button>
+    </div>
+    <script
+      type="text/javascript"
+      src="js/script.js"
+    />
   </body>
 </html>
