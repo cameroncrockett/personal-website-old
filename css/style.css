@@ -8,20 +8,24 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .header {
   position: absolute;
-  width: 100%;
+  min-width: 100vw;
   background-color: rgba(49, 55, 210, 1);
-  height: 15%;
+  height: 15vh;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .nav-container {
   display: flex;
-  margin-left: 13%;
+  margin: auto auto auto 15vw;
 }
 
 .btn1-anim {
@@ -49,7 +53,7 @@ html {
 }
 
 .nav-btn {
-  margin: 3.3% 3.3%;
+  margin: 15% 25% 15% 0;
   transition: transform 0.5s;
 }
 
@@ -64,8 +68,8 @@ html {
 
 .first-text {
   position: absolute;
-  top: 40%;
-  left: -45%;
+  top: 40vh;
+  left: -45vw;
   animation: slideFromLeft 1.5s ease 2s;
   animation-fill-mode: forwards;
 }
@@ -77,11 +81,11 @@ html {
 }
 
 .profile-img img {
-  max-width: 20%;
+  max-width: 20vw;
   opacity: 0;
   position: absolute;
-  left: 53rem;
-  top: 13rem;
+  left: 65vw;
+  top: 35vh;
   border-radius: 50%;
   animation: appear 2s ease 3s;
   animation-fill-mode: forwards;
@@ -89,8 +93,8 @@ html {
 
 .hire-btn-container {
   position: absolute;
-  top: 70%;
-  left: 30%;
+  top: 70vh;
+  left: 30vw;
   opacity: 0;
   animation: appear 2s ease 4s;
   animation-fill-mode: forwards;
@@ -105,7 +109,7 @@ html {
   background-color: rgba(49, 55, 210, 1);
   padding: 0.5rem 0rem;
   border-radius: 1rem;
-  width: 7rem;
+  width: 9vw;
   color: white;
   cursor: pointer;
   box-shadow: -5px 5px 3px grey;
@@ -118,9 +122,9 @@ html {
 
 .second-body {
   display: flex;
-  top: 100%;
-  min-width: 100%;
-  min-height: 100%;
+  top: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   position: absolute;
   background-image: linear-gradient(
     to bottom,
@@ -130,7 +134,7 @@ html {
 }
 
 .stock-img {
-  margin: 8.5rem 0 0 5rem;
+  margin: 8.5rem 0 0 4rem;
 }
 .stock-img img {
   border-radius: 1rem;
@@ -139,14 +143,14 @@ html {
 .second-text {
   color: white;
   position: absolute;
-  top: 10rem;
-  left: 47rem;
+  top: 20vh;
+  left: 59vw;
 }
 
 .about-options {
   position: absolute;
-  top: 17rem;
-  left: 45rem;
+  top: 40vh;
+  left: 57vw;
 }
 
 .about-options ul li {
@@ -184,20 +188,21 @@ html {
   line-height: 2rem;
   color: rgba(49, 55, 210, 1);
   position: relative;
-  max-width: 34rem;
-  max-height: 10rem;
+  max-width: 42vw;
+  max-height: 25vh;
   margin: 1rem 4rem;
   padding: 1rem;
-  top: 20rem;
+  top: 50vh;
   box-shadow: -5px 5px 3px black;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 .third-body {
   display: flex;
   position: absolute;
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   top: 200vh;
 }
 
@@ -206,7 +211,7 @@ html {
   justify-content: center;
   text-align: center;
   position: relative;
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 .card-container {
@@ -214,39 +219,39 @@ html {
   flex-direction: row;
   position: absolute;
   justify-content: space-evenly;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   flex-wrap: wrap;
 }
 
 .card {
   display: flex;
   position: relative;
-  flex-basis: 27rem;
-  max-height: 13rem;
+  flex-basis: 30vw;
+  max-height: 13vh;
 }
 
 #capture-image {
-  width: 27rem;
+  width: 35vw;
   box-shadow: -5px 5px 5px gray;
   border-radius: 1rem;
 }
 
 #music-image {
-  width: 27rem;
+  width: 35vw;
   box-shadow: -5px 5px 5px gray;
   border-radius: 1rem;
   border: 0.5px solid rgb(49, 55, 210);
 }
 
 #ignite-image {
-  width: 27rem;
+  width: 35vw;
   box-shadow: -5px 5px 5px gray;
   border-radius: 1rem;
 }
 
 #card1 {
-  margin-top: 9rem;
+  margin-top: 23vh;
   margin-left: auto;
   transition: transform 0.7s;
 }
@@ -256,7 +261,7 @@ html {
 }
 
 #card2 {
-  margin-top: 9rem;
+  margin-top: 23vh;
   margin-right: auto;
   margin-left: auto;
   transition: transform 0.7s;
@@ -277,8 +282,8 @@ html {
 
 .topBtn {
   position: fixed;
-  right: 0rem;
-  bottom: 2rem;
+  right: 0;
+  bottom: 5vh;
 }
 
 .topBtn button {
@@ -287,6 +292,13 @@ html {
   padding: 0.3rem;
   font-size: 1rem;
   border: 1px solid white;
+}
+
+/* 2778x1284 pixels at 458ppi -- iPhone 12 Pro Max --*/
+@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  * {
+    overflow-x: hidden;
+  }
 }
 
 /* Animations */
