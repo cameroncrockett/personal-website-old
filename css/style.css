@@ -235,6 +235,7 @@ html {
   width: 35vw;
   box-shadow: -5px 5px 5px gray;
   border-radius: 1rem;
+  border: 0.5px solid rgb(49, 55, 210);
 }
 
 #music-image {
@@ -247,11 +248,12 @@ html {
 #ignite-image {
   width: 35vw;
   box-shadow: -5px 5px 5px gray;
+  border: 0.5px solid rgb(49, 55, 210);
   border-radius: 1rem;
 }
 
 #card1 {
-  margin-top: 23vh;
+  margin-top: 21vh;
   margin-left: auto;
   transition: transform 0.7s;
 }
@@ -261,7 +263,7 @@ html {
 }
 
 #card2 {
-  margin-top: 23vh;
+  margin-top: 21vh;
   margin-right: auto;
   margin-left: auto;
   transition: transform 0.7s;
@@ -278,6 +280,32 @@ html {
 
 #card3:hover {
   transform: scale(1.1);
+}
+
+.fourth-body {
+  display: flex;
+  top: 300vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(49, 55, 210, 1),
+    rgba(49, 55, 210, 0.8)
+  );
+}
+
+.contact-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto auto;
+  border: 1px solid red;
+  flex-basis: 30vw;
+}
+
+#email {
+  margin: auto auto;
 }
 
 .topBtn {

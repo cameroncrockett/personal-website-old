@@ -17,6 +17,10 @@
       href="css/style.css"
     />
     <link rel="stylesheet" href="css/animate.css" />
+    <link
+      href="css/contact-form.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="top" class="header">
@@ -38,7 +42,10 @@
           >
         </div>
         <div id="btn3" class="nav-btn btn3-anim">
-          <a id="navlink3" class="nav-link" href="#"
+          <a
+            id="navlink3"
+            class="nav-link"
+            href="#contact"
             >Contact</a
           >
         </div>
@@ -116,9 +123,9 @@
           </p>
         </div>
       </div>
-      <div class="third-body">
+      <div id="portfolio" class="third-body">
         <div class="portfolio-header-container">
-          <h1 id="portfolio" class="big">Portfolio</h1>
+          <h1 class="big">Portfolio</h1>
         </div>
         <div class="card-container">
           <div id="card1" class="card">
@@ -145,18 +152,90 @@
               />
             </a>
           </div>
-          <!--           <div id="card3" class="card">
+          <div id="card3" class="card">
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://cameroncrockett.github.io/ignite-project/"
               ><img
                 id="ignite-image"
-                src="./images/captureproject.png"
+                src="./images/igniteproject.png"
                 alt="Ignite Project"
               />
             </a>
-          </div> -->
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="fourth-body">
+        <div class="fcf-body">
+          <div id="fcf-form">
+            <h3 class="fcf-h3">
+              Feel free to reach out!
+            </h3>
+
+            <form
+              id="fcf-form-id"
+              class="fcf-form-class"
+              method="post"
+              action="contact-form-process.php"
+            >
+              <div class="fcf-form-group">
+                <label for="Name" class="fcf-label"
+                  >Your name</label
+                >
+                <div class="fcf-input-group">
+                  <input
+                    type="text"
+                    id="Name"
+                    name="Name"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <label for="Email" class="fcf-label"
+                  >Your email address</label
+                >
+                <div class="fcf-input-group">
+                  <input
+                    type="email"
+                    id="Email"
+                    name="Email"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <label for="Message" class="fcf-label"
+                  >Your message</label
+                >
+                <div class="fcf-input-group">
+                  <textarea
+                    id="Message"
+                    name="Message"
+                    class="fcf-form-control"
+                    rows="6"
+                    maxlength="3000"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <button
+                  type="submit"
+                  id="fcf-button"
+                  class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
