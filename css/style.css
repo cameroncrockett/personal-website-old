@@ -66,10 +66,47 @@ html {
   text-decoration: none;
 }
 
+.social-icon-container {
+  display: flex;
+  position: absolute;
+  right: 15vw;
+  top: 4.5vh;
+  margin: auto 0;
+  opacity: 0;
+  animation: appear 3s ease 3s;
+  animation-fill-mode: forwards;
+  transition: transform 0.5s;
+}
+
+.social-icon {
+  width: 3vw;
+  height: 3vw;
+  margin: 0 2vw;
+  transition: transform 0.7s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.first-body {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
 .first-text {
   position: absolute;
   top: 40vh;
   left: -45vw;
+  color: white;
   animation: slideFromLeft 1.5s ease 2s;
   animation-fill-mode: forwards;
 }
@@ -94,7 +131,7 @@ html {
 .hire-btn-container {
   position: absolute;
   top: 70vh;
-  left: 30vw;
+  left: 73vw;
   opacity: 0;
   animation: appear 2s ease 4s;
   animation-fill-mode: forwards;
@@ -107,17 +144,29 @@ html {
 
 .hire-btn {
   background-color: rgba(49, 55, 210, 1);
-  padding: 0.5rem 0rem;
+  padding: 1rem 0rem;
   border-radius: 1rem;
-  width: 9vw;
+  width: 12vw;
   color: white;
   cursor: pointer;
-  box-shadow: -5px 5px 3px grey;
-  border: none;
+  border: 2px solid white;
 }
 
 .hire-btn:focus {
   outline: none;
+}
+
+.scroll-icon {
+  position: absolute;
+  min-width: 2vw;
+  min-height: 5vh;
+  bottom: 5vh;
+  left: 49vw;
+  background-image: url("../images/down.png");
+  background-position: center;
+  background-size: cover;
+  animation: pulse 2s infinite;
+  animation: bounceDown 2s infinite;
 }
 
 .second-body {
@@ -149,8 +198,8 @@ html {
 
 .about-options {
   position: absolute;
-  top: 40vh;
-  left: 57vw;
+  top: 39vh;
+  left: 54vw;
 }
 
 .about-options ul li {
@@ -160,11 +209,14 @@ html {
 .about-options-button {
   font-weight: 500;
   background: transparent;
-  border: none;
+  border: 2px solid white;
   color: white;
   margin: 0 1.2rem;
   font-size: 1.4rem;
   cursor: pointer;
+  box-shadow: -3px 3px 3px black;
+  border-radius: 1rem;
+  padding: 0.6rem;
 }
 .about-options-button button {
   transition: text-decoration 2.5s;
@@ -304,8 +356,12 @@ html {
   flex-basis: 30vw;
 }
 
-#email {
+.form-input {
   margin: auto auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .topBtn {
@@ -320,6 +376,20 @@ html {
   padding: 0.3rem;
   font-size: 1rem;
   border: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.topBtnAnimate {
+  animation: topBtnSlideIn 1s;
+}
+
+.topBtnAnimateOut {
+  animation: topBtnSlideOut 1s;
+}
+
+.topBtn button:hover {
+  background-color: rgba(122, 122, 122, 1);
 }
 
 /* 2778x1284 pixels at 458ppi -- iPhone 12 Pro Max --*/
@@ -346,5 +416,57 @@ html {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes topBtnSlideIn {
+  0% {
+    display: none;
+    right: -75px;
+  }
+  1% {
+    display: flex;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes topBtnSlideOut {
+  0% {
+    right: 0px;
+  }
+  99% {
+    right: -75px;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

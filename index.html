@@ -13,6 +13,10 @@
     <title>Cameron Crockett</title>
     <link
       rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="css/style.css"
     />
@@ -49,9 +53,36 @@
             >Contact</a
           >
         </div>
+        <div class="social-icon-container">
+          <div class="social-icon">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/cameroncrockett">
+            <img class="social-icon" src="./images/github.png" alt="Github">
+          </a>
+          </div>
+          <div class="social-icon">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/cameron-crockett-83793717b/">
+            <img class="social-icon" src="./images/linkedin.png" alt="LinkedIn">
+          </a>
+          </div>
+          <div class="social-icon">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.fiverr.com/mytodin">
+            <img class="social-icon" src="./images/fiverr.png" alt="Fiverr">
+          </a>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="content">
+    <div class="first-body">
       <div class="first-text">
         <p>Hello</p>
         <p class="big">I'm Cameron</p>
@@ -60,30 +91,31 @@
           web designer
         </p>
       </div>
-      <div class="hire-btn-container">
-        <button class="hire-btn">Hire Me</button>
+<!--       <div class="hire-btn-container">
+        <button
+          onclick="window.location.href='#contact'"
+          class="hire-btn"
+        >
+          Hire Me
+        </button> -->
+      <div class="scroll-icon">
       </div>
-      <div class="profile-img">
-        <img
-          src="./images/profile.png"
-          alt="Profile picture of Cameron"
-        />
       </div>
       <div id="about" class="second-body">
-        <div class="stock-img">
+        <div data-aos="fade-right" class="stock-img">
           <img
             src="./images/stock.jpg"
             alt="stock photo"
           />
         </div>
-
-        <div class="second-text">
+        <div data-aos="fade-left" class="second-text">
           <h1 class="big">About Me</h1>
         </div>
         <div class="about-options">
           <ul>
             <li>
               <button
+              data-aos="flip-up"
                 id="life"
                 onclick="lifeText()"
                 class="about-options-button"
@@ -93,6 +125,7 @@
             </li>
             <li>
               <button
+              data-aos="flip-up"
                 id="education"
                 onclick="educationText()"
                 class="about-options-button"
@@ -102,6 +135,7 @@
             </li>
             <li>
               <button
+              data-aos="flip-up"
                 id="experience"
                 onclick="experienceText()"
                 class="about-options-button"
@@ -111,7 +145,7 @@
             </li>
           </ul>
         </div>
-        <div
+        <div data-aos="flip-right"
           id="p-div"
           class="about-paragraph animate__animated"
         >
@@ -124,11 +158,15 @@
         </div>
       </div>
       <div id="portfolio" class="third-body">
-        <div class="portfolio-header-container">
+        <div data-aos="fade-down" class="portfolio-header-container">
           <h1 class="big">Portfolio</h1>
         </div>
         <div class="card-container">
-          <div id="card1" class="card">
+          <div
+            data-aos="fade-right"
+            id="card1"
+            class="card"
+          >
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -140,7 +178,11 @@
               />
             </a>
           </div>
-          <div id="card2" class="card">
+          <div
+            data-aos="fade-left"
+            id="card2"
+            class="card"
+          >
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -152,7 +194,11 @@
               />
             </a>
           </div>
-          <div id="card3" class="card">
+          <div
+            data-aos="fade-up"
+            id="card3"
+            class="card"
+          >
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -167,7 +213,7 @@
         </div>
       </div>
       <div id="contact" class="fourth-body">
-        <div class="fcf-body">
+        <div data-aos="zoom-in" class="fcf-body">
           <div id="fcf-form">
             <h3 class="fcf-h3">
               Feel free to reach out!
@@ -240,7 +286,7 @@
       </div>
     </div>
 
-    <div class="topBtn">
+    <div id="top-btn" class="topBtn hidden">
       <button onclick="window.location.href='#top'">
         Top ^
       </button>
@@ -249,5 +295,12 @@
       type="text/javascript"
       src="js/script.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out-back",
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
